@@ -4,7 +4,7 @@ pipeline{
         stage("A"){
             steps{
                 echo "========executing A========"
-                sh 'hello.sh'
+                sh '/var/jenkins_home/hello.sh'
             }
         }
     }
