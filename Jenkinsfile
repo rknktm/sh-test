@@ -4,14 +4,14 @@ pipeline{
         stage("Sh-Test"){
             steps{
                 echo "========executing A========"
-                sh './sh_files/hello.sh'
+                sh 'bash ./sh_files/hello.sh'
             }
         }
 
         stage("docker-build"){
             steps{
                 echo "========executing dockerfile========"
-                sh './sh_files/build.sh'
+                sh 'bash ./sh_files/build.sh'
             }
         }
     }
