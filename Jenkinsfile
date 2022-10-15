@@ -1,10 +1,17 @@
 pipeline{
     agent any
     stages{
-        stage("A"){
+        stage("Sh-Test"){
             steps{
                 echo "========executing A========"
-                sh '/var/jenkins_home/hello.sh'
+                sh './sh_files/hello.sh'
+            }
+        }
+
+        stage("docker-build"){
+            steps{
+                echo "========executing dockerfile========"
+                sh './sh_files/build.sh'
             }
         }
     }
